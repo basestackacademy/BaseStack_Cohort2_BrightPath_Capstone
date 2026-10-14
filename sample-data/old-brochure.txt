@@ -1,0 +1,3 @@
+BrightPath Tutors - archived sample brochure.
+This synthetic file exists only to demonstrate an S3 lifecycle rule.
+Do not place real learner or customer information in the capstone bucket.

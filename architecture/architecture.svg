@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<defs><style>
+.title{font:700 30px Arial,sans-serif;fill:#123047}.subtitle{font:16px Arial,sans-serif;fill:#476274}
+.label{font:700 19px Arial,sans-serif;fill:#123047}.small{font:15px Arial,sans-serif;fill:#28485a}.tiny{font:13px Arial,sans-serif;fill:#4f6876}
+.box{fill:#fff;stroke:#b8ccd7;stroke-width:2;rx:16}.blue{fill:#eaf5fb;stroke:#6ba8c6;stroke-width:2;rx:16}.green{fill:#edf8ef;stroke:#8aba91;stroke-width:2;rx:16}.gold{fill:#fff7e6;stroke:#d6b46a;stroke-width:2;rx:16}.line{stroke:#3f6e87;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#3f6e87"/></marker></defs>
+<rect width="1200" height="720" fill="#f7fafc"/>
+<text x="52" y="55" class="title">BrightPath Tutors - Simple AWS Website</text>
+<text x="52" y="84" class="subtitle">One EC2 web server, a small public network, and private backups - console-only student lab</text>
+<text x="55" y="548" class="tiny">Supporting console tasks (not part of visitor traffic)</text>
+<rect x="520" y="135" width="380" height="390" rx="24" fill="#f0f7fb" stroke="#7aa6bd" stroke-width="2.5" stroke-dasharray="10 7"/>
+<text x="540" y="172" class="label">Student VPC: 10.20.0.0/16</text>
+<rect x="90" y="225" width="160" height="110" class="box"/>
+<text x="170" y="264" text-anchor="middle" class="label">Browser</text><text x="170" y="291" text-anchor="middle" class="small">Student / visitor</text>
+<rect x="310" y="225" width="170" height="110" class="blue"/>
+<text x="395" y="264" text-anchor="middle" class="label">Internet</text><text x="395" y="291" text-anchor="middle" class="small">Gateway (IGW)</text>
+<rect x="555" y="200" width="320" height="160" class="green"/>
+<text x="715" y="235" text-anchor="middle" class="label">Public subnet</text><text x="715" y="261" text-anchor="middle" class="small">10.20.1.0/24</text>
+<rect x="590" y="278" width="250" height="62" class="box"/>
+<text x="715" y="304" text-anchor="middle" class="label">EC2 + Apache</text><text x="715" y="326" text-anchor="middle" class="tiny">BrightPath website / EBS disk</text>
+<path d="M250 280 H310" class="line" marker-end="url(#arrow)"/><path d="M480 280 H555" class="line" marker-end="url(#arrow)"/><path d="M875 309 H925" class="line" marker-end="url(#arrow)"/>
+<rect x="925" y="235" width="170" height="125" class="gold"/>
+<text x="1010" y="271" text-anchor="middle" class="label">EBS snapshot</text><text x="1010" y="298" text-anchor="middle" class="small">Point-in-time</text><text x="1010" y="321" text-anchor="middle" class="small">volume backup</text>
+<text x="715" y="405" text-anchor="middle" class="tiny">Route table: 0.0.0.0/0 → Internet Gateway</text>
+<text x="715" y="430" text-anchor="middle" class="tiny">Security group: inbound HTTP/80 only; no inbound SSH/22</text>
+<rect x="90" y="565" width="460" height="105" class="blue"/>
+<text x="320" y="599" text-anchor="middle" class="label">Private S3 backup bucket</text><text x="320" y="625" text-anchor="middle" class="small">index.html + archived sample file</text><text x="320" y="648" text-anchor="middle" class="tiny">Console upload • private • encrypted • versioned • lifecycle</text>
+<rect x="650" y="565" width="445" height="105" class="box"/>
+<text x="872" y="599" text-anchor="middle" class="label">Security &amp; evidence</text><text x="872" y="625" text-anchor="middle" class="small">IAM / MFA review • CloudTrail Event history</text><text x="872" y="648" text-anchor="middle" class="tiny">Account and audit evidence review</text>
+
+</svg>
